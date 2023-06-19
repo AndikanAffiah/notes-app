@@ -7,6 +7,7 @@ import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate"
 const pinia = createPinia();
 
+// @ts-ignore
 import App from './App.vue'
 
 const app = createApp(App)
