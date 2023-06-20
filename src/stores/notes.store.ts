@@ -22,7 +22,7 @@ export const useNotesStore = defineStore("notes-store", {
       }).reverse()
     },
     deleteNote(key: number){
-      this.notes = this.notes.reverse().filter((noteItem, index) => index != key)
+      this.notes = this.notes.reverse().filter((noteItem, index) => index != key).reverse()
     }
   },
   persist: true,
