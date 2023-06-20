@@ -7,7 +7,7 @@ const notes = ref<{title: string, description: string}[]>([])
 onMounted(()=>{
   notes.value = [...useNotesStore().notes]
 })
-watch(useNotesStore().notes, ()=>{
+watch(useNotesStore(), ()=>{
   notes.value = [...useNotesStore().notes]
 })
 
