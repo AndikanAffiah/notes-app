@@ -8,7 +8,9 @@ export const useNotesStore = defineStore("notes-store", {
   },
   actions: {
     addNote(note: { title: string, description: string}){
-      this.notes.push(note)
+      if(note.title.length > 0 && note.description.length > 0){
+        this.notes.push(note);
+      }
     },
     updateNote(note:{ title: string, description: string}, key:number){
       this.notes = this.notes.reverse().map((noteitem:{ title: string, description: string}, index:number)=>{
