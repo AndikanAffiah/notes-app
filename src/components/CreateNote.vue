@@ -38,19 +38,19 @@ const handleSaveNote = () =>{
 
 <template>
   <div class="flex justify-center mb-6">
-    <div>
+    <div class="w-96">
       <div>
         <label for="title" class="block">
           Title
         </label>
-        <input v-model="modalData.title" type="text" name="title" id="title" placeholder="Note Title" class="block border border-gray-300 p-2 w-96"/>
+        <input v-model="modalData.title" type="text" name="title" id="title" placeholder="Note Title" class="block border border-gray-300 p-2 w-96 rounded-lg"/>
       </div>
 
       <div class="mt-5">
         <label for="description" class="block">
           Description
         </label>
-        <textarea v-model="modalData.description" type="text" name="description" id="description" placeholder="Describe your note" class="block border border-gray-300 p-2 w-96"/>
+        <textarea v-model="modalData.description" type="text" name="description" id="description" placeholder="Describe your note" class="block border border-gray-300 p-2 w-96 rounded-lg"/>
       </div>
 
       <div class="mt-5 flex gap-2 items-center">

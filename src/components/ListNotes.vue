@@ -36,12 +36,12 @@ const handleConfirmDelete = () => {
 </script>
 
 <template>
-  <div class="grid grid-cols-3 gap-5 h-96 overflow-y-scroll shadow-inner p-4 border">
+  <div class="grid grid-cols-3 gap-5 h-[530px] overflow-y-scroll shadow-inner p-4 border">
     <div v-for="(note,key) in notes" class="rounded w-56 card">
       <div class="w-full h-64 flex flex-col justify-between bg-green-200 rounded-lg border border-green-300 mb-6 py-5 px-4">
         <div>
           <h4 class="text-gray-800 font-bold mb-3">{{ note.title }}</h4>
-          <p class="text-gray-800 text-sm">{{
+          <p class="text-gray-800 text-sm h-40 overflow-y-hidden overflow-ellipsis">{{
               note.description
             }}</p>
         </div>
