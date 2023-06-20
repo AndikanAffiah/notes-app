@@ -53,8 +53,16 @@ const handleSaveNote = () =>{
         <textarea v-model="modalData.description" type="text" name="description" id="description" placeholder="Describe your note" class="block border border-gray-300 p-2 w-96"/>
       </div>
 
+      <div class="mt-5 flex gap-2 items-center">
+        <div>Counter: </div>
+        <div>{{modalData.description.length}}</div>
+      </div>
+
       <div class="mt-4 flex justify-end">
-        <button class="bg-blue-500 rounded-md px-3 py-1 text-white" @click="handleSaveNote">Save</button>
+        <button class="bg-blue-500 rounded-md px-3 py-1 text-white" @click="handleSaveNote">
+          <span v-if="props.noteData?.title === ''">Save</span>
+          <span v-else>update</span>
+        </button>
       </div>
 
     </div>
