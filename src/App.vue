@@ -16,7 +16,7 @@ const handleClearProps = () => {
 
 <template>
   <div class="h-screen flex items-center justify-center">
-    <div class="">
+    <div>
       <CreateNote :note-data="noteData" :location-key="locationKey" @clear-props="handleClearProps"/>
       <ListNotes @edit-note="showForm"/>
     </div>
