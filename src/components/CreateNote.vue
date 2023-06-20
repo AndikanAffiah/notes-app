@@ -22,16 +22,20 @@ watch(props, ()=>{
 
 const handleSaveNote = () =>{
   if(props.noteData?.title === ""){
-    useNotesStore().addNote({...modalData.value})
-    modalData.value = {
-      title: "",
-      description: ""
+    if(modalData.value.title.length > 0 && modalData.value.description.length > 0){
+      useNotesStore().addNote({...modalData.value})
+      modalData.value = {
+        title: "",
+        description: ""
+      }
+      emits("clearProps")
     }
   }else{
     useNotesStore().updateNote({...modalData.value}, props.locationKey as Number)
+    emits("clearProps")
+
   }
 
-  emits("clearProps")
 }
 
 </script>
